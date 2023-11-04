@@ -73,7 +73,8 @@ li.dropdown {
 
 .content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+text-align: center;
     color: white;
     margin: 10px;
     border-radius: 6px;
