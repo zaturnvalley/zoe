@@ -22,4 +22,17 @@ function makeNavYears() {
   }
 }
 
+function changeBackgroundColor() {
+  if(!document.body.className){
+    document.body.className = 'body-alt-style';
+    document.getElementById('nav').className = 'night';
+    document.getElementById('night-button').innerText = 'Beach Mode';
+  } else {
+    document.body.className = '';
+    document.getElementById('nav').className = '';
+    document.getElementById('night-button').innerText = 'Nighttime Mode';
+  }
+
+}
+
 makeNavYears();

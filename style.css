@@ -1,5 +1,19 @@
 body {
-    background: linear-gradient(100deg, #f3889e, purple);
+    background: linear-gradient(100deg, #00FFFF, purple);
+    -webkit-animation: ColorChange 2s ease infinite;
+    -moz-animation: ColorChange 2s ease infinite;
+    animation: ColorChange 2s ease infinite;
+    overflow-x: hidden;
+    margin: 0px;
+    position: relative;
+    min-height: 100%;
+    height: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.body-alt-style {
+    background: linear-gradient(100deg, #2b6687, #4f0f46);
     -webkit-animation: ColorChange 1s ease infinite;
     -moz-animation: ColorChange 1s ease infinite;
     animation: ColorChange 1s ease infinite;
@@ -12,6 +26,10 @@ body {
     font-size: 20px;
 }
 
+.night {
+    background-color: #392f3c;
+}
+
 ul {
     display: flex;
     justify-content: space-between;
@@ -20,7 +38,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: magenta;
+    background-color: rgb(156, 0, 156);
 }
 
 li {
@@ -51,12 +69,12 @@ li.dropdown {
     position: absolute;
     background-color: #f3889e;
     width: 100%;
-    width: -moz-available;          
-    width: -webkit-fill-available;  
+    width: -moz-available;
+    width: -webkit-fill-available;
     width: fill-available;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    overflow:scroll;
+    overflow: scroll;
 }
 
 .dropdown-content a {
@@ -87,21 +105,94 @@ li.dropdown {
     background-color: rgba(255, 255, 255, 0.2)
 }
 
-.content > .iframe-container {
+.content>.iframe-container {
     overflow: hidden;
-    padding-top: 56.25%; /* 16:9 */
+    padding-top: 56.25%;
+    /* 16:9 */
     padding-left: 10%;
     padding-right: 10%;
     position: relative;
     margin: 0 10%;
-  } 
-  
-  .iframe-container iframe {
+}
+
+.iframe-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     border: 0;
     width: 100%;
     height: 100%;
-  }
+}
 
+#night-button {
+
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#night-button:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+#night-button:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.button-container {
+    margin: 0 auto;
+    width: 180px;
+}
