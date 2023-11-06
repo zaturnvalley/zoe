@@ -9,6 +9,7 @@ body {
     min-height: 100%;
     height: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
 }
 
 ul {
@@ -49,7 +50,10 @@ li.dropdown {
     display: none;
     position: absolute;
     background-color: #f3889e;
-    min-width: 160px;
+    width: 100%;
+    width: -moz-available;          
+    width: -webkit-fill-available;  
+    width: fill-available;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -74,9 +78,13 @@ li.dropdown {
 .content {
     display: flex;
     flex-direction: column;
-text-align: center;
+    text-align: center;
     color: white;
     margin: 10px;
     border-radius: 6px;
     background-color: rgba(255, 255, 255, 0.2)
+}
+
+.content > iframe {
+    margin: 0 auto;
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="icon" type="image/png" href="./titleIcon.png" /> -->
+    <title>Zoe - Blog</title>
+    <system.webServer>
+        …
+      
+        <httpProtocol>
+          <customHeaders>
+            <add name="X-Frame-Options" value="SAMEORIGIN" />
+          </customHeaders>
+        </httpProtocol>
+      
+        …
+      </system.webServer>
+      
+  </head>
+  <body>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./blog.html">Blog</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Birthdays</a>
+        <div class="dropdown-content">
+          <a href="#">4 years</a>
+          <a href="#">5 years</a>
+          <a href="#">6 years</a>
+          <a href="#">7 years</a>
+          <a href="#">8 years</a>
+          <a href="#">9 years</a>
+          <a href="#">10 years</a>
+          <a href="#">11 years</a>
+          <a href="#">12 years</a>
+          <a href="#">13 years</a>
+          <a href="#">14 years</a>
+          <a href="#">15 years</a>
+          <a href="#">16 years</a>
+          <a href="#">17 years</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="content">
+      <p>Here's a blog of videos that are connected to specific content</p>
+    </div>
+
+    <div class="content">
+      <p>About me</p>
+      Direct link if this embed doesn't work (you'll have to be signed in for it to work since this is a private link) -- This won't work on firefox. <a href="https://youtu.be/Wfn0Q0lWpgI">Here</a>
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Wfn0Q0lWpgI?si=mWEqKtGH7Aiecezl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="content">
+        <p>Family History - Genealogy</p>
+        <p>I misspoke here -- Dwight Newcomb Mason I (the first) was married to Lillian Metz, but their son, Dwight Newcomb Mason Jr, was my grandpa, married to Margaret "Agnes" Robinson (my grandma).
+     <p>Elise Nguyen - Kiet Tran - Khac An Nguyen</p>
+     <p>Zach Mason - Richard Mason (Dwight Mason II and Agnes Mason (Robinson)) - Debra Mason (Skatula) (Roman Skatula and Marty Skatula (Sabo))</p>
+        </div>
+  </body>
+</html>
