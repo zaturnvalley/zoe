@@ -77,6 +77,10 @@ li.dropdown {
     overflow: scroll;
 }
 
+#blog.dropdown-content {
+    width: 150px;
+}
+
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
