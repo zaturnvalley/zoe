@@ -130,6 +130,11 @@ li.dropdown {
     margin: 0 10%;
 }
 
+img.img {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
 .iframe-container iframe {
     position: absolute;
     top: 0;
